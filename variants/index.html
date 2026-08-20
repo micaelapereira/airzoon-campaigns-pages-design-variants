@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>airZoon — Campaign Page variants</title>
+<style>
+  :root{
+    --color-primary: #E0401C; --color-primary-hover: #C23217; --color-accent: #D99016; --color-success: #22C55E;
+    --surface-0: #F4F4F5; --surface-1: #F9FAFB; --surface-2: #FFFFFF; --border: #E8E8EA;
+    --text-primary: #18181B; --text-secondary: #52525B; --text-muted: #A1A1AA;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin:0; background: var(--surface-0); color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page-header{ display:flex; align-items:center; padding: 28px 40px 0; max-width: 900px; margin:0 auto; }
+  .brand-logo{ height:88px; width:auto; display:block; }
+  main{ max-width: 900px; margin: 0 auto; padding: 32px 40px 96px; }
+  h1{ font-size: clamp(24px, 3vw, 30px); font-weight:700; margin:0 0 12px; }
+  .intro p{ font-size:14.5px; color: var(--text-secondary); line-height:1.65; max-width:66ch; margin:0 0 8px; }
+  .card-grid{ display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top: 28px; }
+  .variant-card{
+    display:flex; flex-direction:column; gap:10px;
+    background: var(--surface-2); border:1px solid var(--border); border-radius:6px; padding: 22px; text-decoration:none;
+  }
+  .variant-card:hover{ border-color: var(--color-primary); }
+  .variant-card h2{ font-size:16.5px; font-weight:600; color: var(--text-primary); margin:0; }
+  .variant-card p{ font-size:13px; color: var(--text-secondary); line-height:1.55; margin:0; }
+  .variant-card .go{ font-size:13px; font-weight:600; color: var(--color-primary); margin-top:auto; padding-top:4px; }
+  @media (max-width: 640px){
+    .card-grid{ grid-template-columns: 1fr; }
+    .page-header{ padding: 24px 24px 0; }
+    main{ padding: 24px 24px 72px; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="page-header">
+    <img class="brand-logo" src="../assets/airzoon-logo.png" alt="airZoon">
+  </header>
+
+  <main>
+    <div class="intro">
+      <h1>Campaign Pages — layout variants</h1>
+      <p>Landing pages where a business's own customer leaves their contact details to join that business's own list, in exchange for an incentive. Reuses the same shell (hero + mounted card + badge) and the same assets already approved on the Offer Page project.</p>
+    </div>
+
+    <div class="card-grid">
+      <a class="variant-card" href="variant-100montaditos-duotone.html">
+        <h2>100 Montaditos · Duotone</h2>
+        <p>Club Montaditos signup with real 100 Montaditos brand copy. Incentive block is a flat two-tone strip (brand red / light neutral), no radius, no shadow, matching the page's own sharp-cornered vocabulary.</p>
+        <span class="go">View →</span>
+      </a>
+      <a class="variant-card" href="variant-100montaditos-note.html">
+        <h2>100 Montaditos · Note</h2>
+        <p>Same copy and form, with the incentive shown as a slightly rotated, tinted "note" card with a soft shadow instead of the flat duotone strip.</p>
+        <span class="go">View →</span>
+      </a>
+      <a class="variant-card" href="variant-spa-duotone.html">
+        <h2>Aesthetic Medicine · Duotone</h2>
+        <p>Med-spa brand (solid clay background, circular wordmark, real lounge photo), incentive shown as the flat duotone strip. Different campaign angle from the Note variant: a first-visit discount instead of a free consultation.</p>
+        <span class="go">View →</span>
+      </a>
+      <a class="variant-card" href="variant-spa-note.html">
+        <h2>Aesthetic Medicine · Note</h2>
+        <p>Same med-spa shell, incentive shown as a rotated, tinted "note" card. Leads with a free skin consultation instead of a discount.</p>
+        <span class="go">View →</span>
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
